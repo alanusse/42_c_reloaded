@@ -1,10 +1,22 @@
-void ft_putchar(char c);
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: aglanuss <aglanuss@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/07 13:22:57 by aglanuss          #+#    #+#             */
+/*   Updated: 2023/09/07 14:38:06 by aglanuss         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_putstr(char *str)
+void	ft_putchar(char c);
+
+void	ft_putstr(char *str)
 {
-  while(*str != '\0')
-  {
-    ft_putchar(*str);
-    str++;
-  }
+	while (*str != '\0')
+	{
+		ft_putchar(*str);
+		str++;
+	}
 }
