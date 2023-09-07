@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sort_params.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aglanuss <aglanuss@student.42.fr>          +#+  +:+       +#+        */
+/*   By: agustinlanusse <agustinlanusse@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 14:22:19 by aglanuss          #+#    #+#             */
-/*   Updated: 2023/09/07 15:13:15 by aglanuss         ###   ########.fr       */
+/*   Updated: 2023/09/07 20:17:30 by agustinlanu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,40 +23,43 @@ void	ft_putstr(char *str)
 	}
 }
 
-int ft_count_ascii(char *str)
+int	ft_strcmp(char *s1, char *s2)
 {
 	int	i;
-	int count;
 
 	i = 0;
-	count = 0;
-	while(*str != '\0')
+	while (s1[i] != '\0')
 	{
-		count = count + *str;
+		if (s1[i] != s2[i])
+		{
+			return (s1[i] - s2[i]);
+		}
 		i++;
 	}
-	return (count);
+	return (0);
 }
 
-void	ft_sort_params(int argc, char **argv)
+void ft_sort_params(int count, char **params)
 {
 	int	i;
-	int	j;
+	int	step;
+	char *tmp;
 
+	step = 0;
 	i = 1;
-	j = i;
-	while (i < argc)
+	while (step < count)
 	{
-		while (j < argc)
-		{
-			if (ft_count_ascii(argc[i]) > ft_count_ascii(argc[j]))
+		while (i < count - 1) {
+			if (ft_strcmp(params[i], params[i+1]) > 0)
 			{
-				
+				tmp = params[i];
+				params[i] = params[i+1];
+				params[i+1] = tmp;
 			}
-			j++;
+			i++;
 		}
-		j = i;
-		i++;
+		i = 1;
+		step++;
 	}
 }
 
@@ -65,10 +68,11 @@ int	main(int argc, char **argv)
 	int	i;
 
 	i = 1;
+	ft_sort_params(argc, argv);
 	while (i < argc)
 	{
 		ft_putstr(argv[i]);
-		ft_putstr("\n");
+		ft_putchar('\n');
 		i++;
 	}
 	return (1);
