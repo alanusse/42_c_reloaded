@@ -15,15 +15,18 @@ int ft_strlen(char *str)
 
 char *ft_strdup(char *src)
 {
-  char *dup;
   int i;
+  int len;
+  char *dup;
 
   i = 0;
-  dup = (char *) malloc(ft_strlen(src) * sizeof(char));
+  len = ft_strlen(src) + 1;
+  dup = (char *) malloc(len * sizeof(char));
   while(src[i] != '\0')
   {
     dup[i] = src[i];
     i++;
   }
+  dup[len - 1] = '\0';
   return dup;
 }
