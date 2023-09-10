@@ -6,7 +6,7 @@
 /*   By: agustinlanusse <agustinlanusse@student.    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/09/07 14:22:19 by aglanuss          #+#    #+#             */
-/*   Updated: 2023/09/07 20:17:30 by agustinlanu      ###   ########.fr       */
+/*   Updated: 2023/09/10 18:16:28 by agustinlanu      ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,22 +39,22 @@ int	ft_strcmp(char *s1, char *s2)
 	return (0);
 }
 
-void ft_sort_params(int count, char **params)
+void ft_sort_params(int argc, char *argv[])
 {
-	int	i;
-	int	step;
+	int step;
+	int i;
 	char *tmp;
 
-	step = 0;
+	step = 1;
 	i = 1;
-	while (step < count)
+	while(step < argc)
 	{
-		while (i < count - 1) {
-			if (ft_strcmp(params[i], params[i+1]) > 0)
+		while(i < argc - 1) {
+			if (ft_strcmp(argv[i], argv[i + 1]) > 0)
 			{
-				tmp = params[i];
-				params[i] = params[i+1];
-				params[i+1] = tmp;
+				tmp = argv[i];
+				argv[i] = argv[i + 1];
+				argv[i + 1] = tmp;
 			}
 			i++;
 		}
@@ -63,7 +63,7 @@ void ft_sort_params(int count, char **params)
 	}
 }
 
-int	main(int argc, char **argv)
+int	main(int argc, char *argv[])
 {
 	int	i;
 
@@ -75,5 +75,5 @@ int	main(int argc, char **argv)
 		ft_putchar('\n');
 		i++;
 	}
-	return (1);
+	return (0);
 }
