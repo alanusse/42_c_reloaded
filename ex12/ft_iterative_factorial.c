@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bautrodr <bautrodr@student.42barcel>       +#+  +:+       +#+        */
+/*   By: aglanuss <aglanuss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/04 12:28:37 by bautrodr          #+#    #+#             */
-/*   Updated: 2023/09/06 10:12:28 by bautrodr         ###   ########.fr       */
+/*   Created: 2023/09/12 15:56:05 by aglanuss          #+#    #+#             */
+/*   Updated: 2023/09/12 15:56:07 by aglanuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

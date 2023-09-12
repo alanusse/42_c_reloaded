@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_print_alphabet.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bautrodr <bautrodr@student.42barcel>       +#+  +:+       +#+        */
+/*   By: aglanuss <aglanuss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/04 12:25:51 by bautrodr          #+#    #+#             */
-/*   Updated: 2023/09/04 15:59:31 by bautrodr         ###   ########.fr       */
+/*   Created: 2023/09/12 15:55:04 by aglanuss          #+#    #+#             */
+/*   Updated: 2023/09/12 15:55:07 by aglanuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

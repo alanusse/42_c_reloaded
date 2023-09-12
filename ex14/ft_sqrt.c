@@ -3,12 +3,13 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bautrodr <bautrodr@student.42barcel>       +#+  +:+       +#+        */
+/*   By: aglanuss <aglanuss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/04 12:29:10 by bautrodr          #+#    #+#             */
-/*   Updated: 2023/09/06 10:08:19 by bautrodr         ###   ########.fr       */
+/*   Created: 2023/09/12 15:56:36 by aglanuss          #+#    #+#             */
+/*   Updated: 2023/09/12 15:56:38 by aglanuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 int	ft_sqrt(int nb)
 {
 	int	i;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_recursive_factorial.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: bautrodr <bautrodr@student.42barcel>       +#+  +:+       +#+        */
+/*   By: aglanuss <aglanuss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/04 12:28:58 by bautrodr          #+#    #+#             */
-/*   Updated: 2023/09/06 10:07:40 by bautrodr         ###   ########.fr       */
+/*   Created: 2023/09/12 15:56:12 by aglanuss          #+#    #+#             */
+/*   Updated: 2023/09/12 15:56:14 by aglanuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
