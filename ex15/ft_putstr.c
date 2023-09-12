@@ -1,9 +1,21 @@
-void ft_putchar(char c);
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bautrodr <bautrodr@student.42barcel>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/04 12:29:23 by bautrodr          #+#    #+#             */
+/*   Updated: 2023/09/04 12:29:38 by bautrodr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-void ft_putstr(char *str)
+void	ft_putchar(char c);
+
+void	ft_putstr(char *str)
 {
-	int i;
-	
+	int	i;
+
 	i = 0;
 	while (str[i] != '\0')
 	{

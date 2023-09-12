@@ -1,21 +1,35 @@
-#include <unistd.h>
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_params.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bautrodr <bautrodr@student.42barcel>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/04 12:30:49 by bautrodr          #+#    #+#             */
+/*   Updated: 2023/09/04 16:17:03 by bautrodr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-int main(int argc, char *argv[])
+void	ft_putchar(char c);
+
+int	main(int argc, char *argv[])
 {
-	int i;
-	int x;
-	
+	int	i;
+	int	x;
+
 	i = 1;
-	while (i < argc)
+	if (argc > 1)
 	{
-		x = 0;
-		while (argv[i][x] != '\0')
+		while (i < argc)
 		{
-			write(1, &argv[i][x], 1);
-			x++;
+			x = 0;
+			while (argv[i][x] != '\0')
+			{
+				ft_putchar(argv[i][x]);
+				x++;
+			}
+			i++;
+			ft_putchar('\n');
 		}
-		write(1, "\n", 1);
-		i++;
 	}
-	return (0);
 }

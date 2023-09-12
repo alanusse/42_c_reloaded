@@ -1,18 +1,30 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_iterative_factorial.c                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bautrodr <bautrodr@student.42barcel>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/04 12:28:37 by bautrodr          #+#    #+#             */
+/*   Updated: 2023/09/06 10:12:28 by bautrodr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 int	ft_iterative_factorial(int nb)
 {
-	int	result;
+	int	i;
+	int	x;
 
-	result = 1;
-	if ((nb == 0) || (nb == 1))
+	i = 1;
+	x = 1;
+	if ((nb < 0) || (nb > 12))
+		return (0);
+	else if (nb == 0)
 		return (1);
-	else if (nb > 1)
+	while (i <= nb)
 	{
-		while (nb >= 1)
-		{
-			result = result * nb;
-			nb--;
-		}
-		return (result);
+		x = x * i;
+		i++;
 	}
-	return (0); 
+	return (x);
 }

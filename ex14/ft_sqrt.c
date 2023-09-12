@@ -1,17 +1,30 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_sqrt.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bautrodr <bautrodr@student.42barcel>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/04 12:29:10 by bautrodr          #+#    #+#             */
+/*   Updated: 2023/09/06 10:08:19 by bautrodr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 int	ft_sqrt(int nb)
 {
-	int	tmp;
-	int	counter;
-	int	result;
+	int	i;
 
-	tmp = nb;
-	counter = 1;
-	while (counter != nb)
+	i = 1;
+	if (nb < 0)
+		return (0);
+	else
 	{
-		result = tmp / counter;
-		if (result * result == nb)
-			return (result);
-		counter++;
+		while ((i * i <= nb) && (i <= 46340))
+		{
+			if (i * i == nb)
+				return (i);
+			else
+				i++;
+		}
+		return (0);
 	}
-	return (0);
 }

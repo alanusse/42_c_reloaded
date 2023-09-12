@@ -1,43 +1,52 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_sort_params.c                                   :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: bautrodr <bautrodr@student.42barcel>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/09/04 12:31:11 by bautrodr          #+#    #+#             */
+/*   Updated: 2023/09/04 16:48:04 by bautrodr         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 
-void    ft_putchar(char c)
-{
-    write(1, &c, 1);
-}
+void	ft_putchar(char c);
 
-void    ft_putstr(char  *str)
+void	ft_putstr(char *str)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (str[i] != '\0')
-    {
-        ft_putchar(str[i]);
-        i++;
-    }
-    ft_putchar('\n');
+	i = 0;
+	while (str[i] != '\0')
+	{
+		ft_putchar(str[i]);
+		i++;
+	}
+	ft_putchar('\n');
 }
 
 void	ft_print_params(int argc, char **argv)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (++i < argc)
 		ft_putstr(argv[i]);
 }
 
-int ft_strcmp(char *s1, char *s2)
+int	ft_strcmp(char *s1, char *s2)
 {
-    int i;
+	int	i;
 
-    i = 0;
-    while (s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i])
-        i++;
-    return (s1[i] - s2[i]);
+	i = 0;
+	while (s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i])
+		i++;
+	return (s1[i] - s2[i]);
 }
 
-int		main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	int		i;
 	int		z;
