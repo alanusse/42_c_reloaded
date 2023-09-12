@@ -3,14 +3,12 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sort_params.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: agustinlanusse <agustinlanusse@student.    +#+  +:+       +#+        */
+/*   By: aglanuss <aglanuss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/07 14:22:19 by aglanuss          #+#    #+#             */
-/*   Updated: 2023/09/10 18:16:28 by agustinlanu      ###   ########.fr       */
+/*   Created: 2023/09/12 11:37:04 by aglanuss          #+#    #+#             */
+/*   Updated: 2023/09/12 11:37:44 by aglanuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "../ft_putchar.c"
 
 void	ft_putchar(char c);
 
@@ -39,17 +37,18 @@ int	ft_strcmp(char *s1, char *s2)
 	return (0);
 }
 
-void ft_sort_params(int argc, char *argv[])
+void	ft_sort_params(int argc, char *argv[])
 {
-	int step;
-	int i;
-	char *tmp;
+	int		step;
+	int		i;
+	char	*tmp;
 
 	step = 1;
 	i = 1;
-	while(step < argc)
+	while (step < argc)
 	{
-		while(i < argc - 1) {
+		while (i < argc - 1)
+		{
 			if (ft_strcmp(argv[i], argv[i + 1]) > 0)
 			{
 				tmp = argv[i];
