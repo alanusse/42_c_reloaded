@@ -1,1 +1,2 @@
-find . -name "*~" -delete -o -name "#*#" -delete
+#!/bin/bash
+find . \( -name '*~' -o -name '#*#*' \) -exec rm -f {} +

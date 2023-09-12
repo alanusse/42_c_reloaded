@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aglanuss <aglanuss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 12:15:10 by aglanuss          #+#    #+#             */
-/*   Updated: 2023/09/12 12:36:16 by aglanuss         ###   ########.fr       */
+/*   Created: 2023/09/12 15:16:37 by aglanuss          #+#    #+#             */
+/*   Updated: 2023/09/12 15:16:55 by aglanuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_ABS_H
 # define FT_ABS_H
 
-# define ABS(Value) ((Value) < 0 ? (Value) * -1 : (Value))
+# define ABS(Value) ((Value > 0) * Value + (Value < 0) * Value * -1) 
 
 #endif

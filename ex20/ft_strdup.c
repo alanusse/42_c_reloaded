@@ -5,40 +5,35 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aglanuss <aglanuss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 11:32:23 by aglanuss          #+#    #+#             */
-/*   Updated: 2023/09/12 11:38:20 by aglanuss         ###   ########.fr       */
+/*   Created: 2023/09/12 15:15:05 by aglanuss          #+#    #+#             */
+/*   Updated: 2023/09/12 15:15:14 by aglanuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
 #include <stdlib.h>
 
 int	ft_strlen(char *str)
 {
-	int	count;
-
-	count = 0;
-	while (*str != '\0')
-	{
-		count++;
-		str++;
-	}
-	return (count);
-}
-
-char	*ft_strdup(char *src)
-{
-	int		i;
-	int		len;
-	char	*dup;
+	int	i;
 
 	i = 0;
-	len = ft_strlen(src) + 1;
-	dup = (char *)malloc(len * sizeof(char));
-	while (src[i] != '\0')
-	{
-		dup[i] = src[i];
+	while (str[i] != '\0')
 		i++;
-	}
-	dup[len - 1] = '\0';
-	return (dup);
+	return (i);
+}
+
+char	ft_strdup(char *src)
+{
+	char	*cpy;
+	int		len;
+	int		i;
+
+	len = ft_strlen(src);
+	cpy = (char *)malloc(sizeof(*src) * (len + 1));
+	i = -1;
+	while (++i < len)
+		cpy[i] = src[i];
+	cpy[len] = '\0';
+	return (cpy);
 }

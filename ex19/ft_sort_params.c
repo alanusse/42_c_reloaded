@@ -5,20 +5,38 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aglanuss <aglanuss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 11:37:04 by aglanuss          #+#    #+#             */
-/*   Updated: 2023/09/12 11:37:44 by aglanuss         ###   ########.fr       */
+/*   Created: 2023/09/12 15:12:20 by aglanuss          #+#    #+#             */
+/*   Updated: 2023/09/12 15:13:17 by aglanuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
+#include <unistd.h>
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
 
 void	ft_putstr(char *str)
 {
-	while (*str != '\0')
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
 	{
-		ft_putchar(*str);
-		str++;
+		ft_putchar(str[i]);
+		i++;
 	}
+	ft_putchar('\n');
+}
+
+void	ft_print_params(int argc, char **argv)
+{
+	int	i;
+
+	i = 0;
+	while (++i < argc)
+		ft_putstr(argv[i]);
 }
 
 int	ft_strcmp(char *s1, char *s2)
@@ -26,53 +44,36 @@ int	ft_strcmp(char *s1, char *s2)
 	int	i;
 
 	i = 0;
-	while (s1[i] != '\0')
-	{
-		if (s1[i] != s2[i])
-		{
-			return (s1[i] - s2[i]);
-		}
+	while (s1[i] != '\0' && s2[i] != '\0' && s1[i] == s2[i])
 		i++;
-	}
-	return (0);
+	return (s1[i] - s2[i]);
 }
 
-void	ft_sort_params(int argc, char *argv[])
+int	main(int argc, char **argv)
 {
-	int		step;
 	int		i;
-	char	*tmp;
+	int		z;
+	int		cmp;
+	char	*x;
 
-	step = 1;
-	i = 1;
-	while (step < argc)
+	if (argc > 1)
 	{
-		while (i < argc - 1)
+		i = -1;
+		while (++i < (argc - 1))
 		{
-			if (ft_strcmp(argv[i], argv[i + 1]) > 0)
+			z = -1;
+			while (++z < (argc - i - 2))
 			{
-				tmp = argv[i];
-				argv[i] = argv[i + 1];
-				argv[i + 1] = tmp;
+				cmp = ft_strcmp(argv[z + 1], argv[z + 2]);
+				if (cmp > 0)
+				{
+					x = argv[z + 1];
+					argv[z + 1] = argv[z + 2];
+					argv[z + 2] = x;
+				}
 			}
-			i++;
 		}
-		i = 1;
-		step++;
-	}
-}
-
-int	main(int argc, char *argv[])
-{
-	int	i;
-
-	i = 1;
-	ft_sort_params(argc, argv);
-	while (i < argc)
-	{
-		ft_putstr(argv[i]);
-		ft_putchar('\n');
-		i++;
+		ft_print_params(argc, argv);
 	}
 	return (0);
 }

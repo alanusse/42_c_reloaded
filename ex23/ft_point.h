@@ -1,21 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_point.h                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aglanuss <aglanuss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/12 15:11:02 by aglanuss          #+#    #+#             */
-/*   Updated: 2023/09/12 15:11:11 by aglanuss         ###   ########.fr       */
+/*   Created: 2023/09/12 15:17:17 by aglanuss          #+#    #+#             */
+/*   Updated: 2023/09/12 15:17:20 by aglanuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
-{
-	int	i;
+#ifndef FT_POINT_H
+# define FT_POINT_H
 
-	i = 0;
-	while (str[i] != '\0')
-		i++;
-	return (i);
-}
+typedef struct s_point
+{
+	int	x;
+	int	y;
+}				t_point;
+#endif

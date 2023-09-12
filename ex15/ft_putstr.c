@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: aglanuss <aglanuss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/07 13:22:57 by aglanuss          #+#    #+#             */
-/*   Updated: 2023/09/07 14:38:06 by aglanuss         ###   ########.fr       */
+/*   Created: 2023/09/12 15:10:36 by aglanuss          #+#    #+#             */
+/*   Updated: 2023/09/12 15:10:48 by aglanuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,12 @@ void	ft_putchar(char c);
 
 void	ft_putstr(char *str)
 {
-	while (*str != '\0')
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0')
 	{
-		ft_putchar(*str);
-		str++;
+		ft_putchar(str[i]);
+		i++;
 	}
 }

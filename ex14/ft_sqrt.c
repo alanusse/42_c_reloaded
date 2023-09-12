@@ -3,27 +3,27 @@
 /*                                                        :::      ::::::::   */
 /*   ft_sqrt.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: aglanuss <aglanuss@student.42barcel>       +#+  +:+       +#+        */
+/*   By: aglanuss <aglanuss@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/09/07 13:19:08 by aglanuss          #+#    #+#             */
-/*   Updated: 2023/09/07 13:21:01 by aglanuss         ###   ########.fr       */
+/*   Created: 2023/09/12 15:10:19 by aglanuss          #+#    #+#             */
+/*   Updated: 2023/09/12 15:10:24 by aglanuss         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_sqrt(int nb)
 {
-	int	i;
+	int	tmp;
+	int	counter;
+	int	result;
 
-	i = 1;
-	if (nb < 1)
-		return (0);
-	while (i <= nb)
+	tmp = nb;
+	counter = 1;
+	while (counter != nb)
 	{
-		if (i * i == nb)
-			return (i);
-		if (i * i > nb)
-			return (0);
-		i++;
+		result = tmp / counter;
+		if (result * result == nb)
+			return (result);
+		counter++;
 	}
-	return (i);
+	return (0);
 }
